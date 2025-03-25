@@ -2,19 +2,18 @@ import 'package:bloc/bloc.dart';
 
 import 'login.dart';
 
-Login _empty = Login(email: '', organizationId: '');
+MainObject _empty = MainObject(email: '');
 
-class LoginCubit extends Cubit<Login> {
-  LoginCubit() : super(_empty);
+class MainCubit extends Cubit<MainObject> {
+  MainCubit() : super(_empty);
 
   bool _isLogged = false;
 
   bool isLogged() => _isLogged;
 
   void setLogin(String email, String organizationId) {
-    Login login = Login(
+    MainObject login = MainObject(
       email: email,
-      organizationId: organizationId,
     );
 
     emit(login);

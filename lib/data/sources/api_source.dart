@@ -1,16 +1,6 @@
-import 'dart:convert';
-import 'dart:typed_data';
-
 import 'package:dio/dio.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../core/static_data/static_data_query_urls.dart';
-import '../../domain/entities/entity.dart';
-import '../models/multi_part/start_chunks.dart';
-import '../models/multi_part/status_chunks.dart';
 import '../models/status_body/status_body.dart';
-import 'local_data.dart';
 
 Map<String, String> _headers = {
   'Content-Type': 'application/json; charset=utf-8',

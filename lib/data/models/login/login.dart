@@ -1,11 +1,10 @@
-class Login {
+class MainObject {
   final String email;
-  final String organizationId;
 
-  Login({required this.email, required this.organizationId});
+  MainObject({required this.email});
 
   @override
   String toString() {
-    return "Login (Email: \"$email\", OrganizationId: \"$organizationId\")";
+    return "Login (Email: \"$email\")";
   }
 }

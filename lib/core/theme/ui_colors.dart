@@ -14,8 +14,9 @@ Color adjustOpacity(Color color, double opacity) {
   double blue = color.b;
 
   return Color.fromRGBO(
-      freeInterpolate(red, 0, 1, 0, 255).toInt(),
-      freeInterpolate(green, 0, 1, 0, 255).toInt(),
-      freeInterpolate(blue, 0, 1, 0, 255).toInt(),
-      opacity);
+    freeInterpolate(red, 0, 1, 0, 255).toInt(),
+    freeInterpolate(green, 0, 1, 0, 255).toInt(),
+    freeInterpolate(blue, 0, 1, 0, 255).toInt(),
+    opacity,
+  );
 }
