@@ -1,5 +1,5 @@
 class UiTextEs {
-  String get warning {
-    return "Advertencia";
+  String get log {
+    return "Reporte";
   }
 }

@@ -1,9 +1,9 @@
 class UiTextEn {
   String get title {
-    return "Find Your Play - Admin";
+    return "Background Downloader";
   }
 
-  String get warning {
-    return "Warning";
+  String get log {
+    return "Log";
   }
 }

@@ -1,5 +1,10 @@
-double freeInterpolate(double value, double minVal, double maxVal,
-    double minReturn, double maxReturn) {
+double freeInterpolate(
+  double value,
+  double minVal,
+  double maxVal,
+  double minReturn,
+  double maxReturn,
+) {
   if (value <= minVal) {
     return minReturn;
   }

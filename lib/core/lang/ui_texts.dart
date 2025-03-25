@@ -17,11 +17,11 @@ class UiTexts extends ChangeNotifier {
     return UiTextEn().title;
   }
 
-  String get warning {
+  String get log {
     if (_locale.languageCode == 'es') {
-      return UiTextEs().warning;
+      return UiTextEs().log;
     }
 
-    return UiTextEn().warning;
+    return UiTextEn().log;
   }
 }

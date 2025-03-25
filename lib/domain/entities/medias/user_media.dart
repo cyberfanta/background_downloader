@@ -1,23 +1,10 @@
 import '../entity.dart';
 
 class UserMedia extends Entity<UserMedia> {
-  UserMedia({
-    required this.id,
-    required this.name,
-    required this.location,
-    required this.credentialUsername,
-    required this.preview,
-    required this.extension,
-    this.createdAt,
-    this.lastChangedDateTime,
-  });
+  UserMedia({this.id, this.name, this.createdAt, this.lastChangedDateTime});
 
-  String id;
-  String name;
-  String location;
-  String? credentialUsername;
-  String preview;
-  String extension;
+  String? id;
+  String? name;
   String? createdAt;
   String? lastChangedDateTime;
 
@@ -26,10 +13,6 @@ class UserMedia extends Entity<UserMedia> {
     return UserMedia(
       id: json['id'],
       name: json['name'],
-      location: json['location'],
-      credentialUsername: json['credentialUsername'],
-      preview: json['preview'],
-      extension: json['extension'],
       createdAt: json['createdAt'],
       lastChangedDateTime: json['lastChangedDateTime'],
     );
@@ -40,10 +23,6 @@ class UserMedia extends Entity<UserMedia> {
     final map = <String, dynamic>{};
     map['id'] = id;
     map['name'] = name;
-    map['location'] = location;
-    map['credentialUsername'] = credentialUsername;
-    map['preview'] = preview;
-    map['extension'] = extension;
     map['createdAt'] = createdAt;
     map['lastChangedDateTime'] = lastChangedDateTime;
     return map;
@@ -54,10 +33,6 @@ class UserMedia extends Entity<UserMedia> {
     return UserMedia(
       id: "Test",
       name: "",
-      location: "",
-      credentialUsername: "",
-      preview: "",
-      extension: "",
       createdAt: "",
       lastChangedDateTime: "",
     );
@@ -69,10 +44,6 @@ class UserMedia extends Entity<UserMedia> {
         "{"
         "\"id\":\"$id\","
         "\"name\":\"$name\","
-        "\"location\":\"$location\","
-        "\"credentialUsername\":$credentialUsername,"
-        "\"preview\":\"$preview\","
-        "\"extension\":$extension,"
         "\"createdAt\":\"$createdAt\","
         "\"lastChangedDateTime\":\"$lastChangedDateTime\""
         "}";
