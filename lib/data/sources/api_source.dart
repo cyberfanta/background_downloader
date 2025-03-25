@@ -14,7 +14,7 @@ class ApiSource {
   ApiSource()
     : _dio = Dio(
         BaseOptions(
-          headers: _defaultHeaders,
+          headers: _headers,
           connectTimeout: Duration(milliseconds: 10000),
           receiveTimeout: Duration(milliseconds: 10000),
         ),
@@ -25,6 +25,8 @@ class ApiSource {
   // GET Request
   Future<StatusBody> getQuery(String url, CancelToken? cancelToken) async {
     try {
+      _dio.options.headers = _headers;
+
       Response response = await _dio.get(url, cancelToken: cancelToken);
 
       return StatusBody(
@@ -45,6 +47,8 @@ class ApiSource {
     Map<String, dynamic>? body,
   ]) async {
     try {
+      _dio.options.headers = _headers;
+
       Response response = await _dio.post(
         url,
         cancelToken: cancelToken,
@@ -69,6 +73,8 @@ class ApiSource {
     Map<String, dynamic>? body,
   ]) async {
     try {
+      _dio.options.headers = _headers;
+
       Response response = await _dio.put(
         url,
         cancelToken: cancelToken,
@@ -93,6 +99,8 @@ class ApiSource {
     Map<String, dynamic>? body,
   ]) async {
     try {
+      _dio.options.headers = _headers;
+
       Response response = await _dio.patch(
         url,
         cancelToken: cancelToken,
@@ -117,6 +125,8 @@ class ApiSource {
     Map<String, dynamic>? body,
   ]) async {
     try {
+      _dio.options.headers = _headers;
+
       Response response = await _dio.delete(
         url,
         cancelToken: cancelToken,

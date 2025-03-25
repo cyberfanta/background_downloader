@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../core/theme/ui_colors.dart';
 import '../../../data/models/login/login.dart';
 import '../../../data/models/login/login_cubit.dart';
+import '../../../data/repository.dart';
 
 class MainView extends StatefulWidget {
   const MainView({super.key});
@@ -16,6 +17,14 @@ class MainView extends StatefulWidget {
 
 class _MainViewState extends State<MainView> {
   String tag = MainView.routeName.substring(1, MainView.routeName.length);
+
+  @override
+  void initState() {
+    super.initState();
+
+    Repository repository = Repository();
+    repository.init();
+  }
 
   @override
   Widget build(BuildContext context) {

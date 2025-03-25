@@ -7,4 +7,9 @@ class Repository {
       _localData = localData ?? LocalData();
   final ApiSource _apiSource;
   final LocalData _localData;
+
+  void init() {
+    // _apiSource.init();
+    // _localData.init();
+  }
 }
