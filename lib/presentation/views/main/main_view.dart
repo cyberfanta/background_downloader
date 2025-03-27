@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_blurhash/flutter_blurhash.dart';
 
 import '../../../core/theme/ui_colors.dart';
 import '../../../data/models/login/login.dart';
 import '../../../data/models/login/login_cubit.dart';
-import '../../../data/repository.dart';
+import '../../../data/repository/app_repository.dart';
+import '../../../data/repository/repository.dart';
 
 class MainView extends StatefulWidget {
   const MainView({super.key});
@@ -22,7 +24,7 @@ class _MainViewState extends State<MainView> {
   void initState() {
     super.initState();
 
-    Repository repository = Repository();
+    Repository repository = AppRepository();
     repository.init();
   }
 
@@ -39,7 +41,9 @@ class _MainViewState extends State<MainView> {
         backgroundColor: cGold,
         body: BlocBuilder<MainCubit, MainObject>(
           builder: (context, _) {
-            return SizedBox.expand();
+            return Expanded(
+              child: BlurHash(hash: "L5H2EC=PM+yV0g-mq.wG9c010J}I"),
+            );
           },
         ),
       ),
